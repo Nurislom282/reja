@@ -1,4 +1,46 @@
 // console.log("TRAIN AREA!");
+const moment = require('moment')
+const { list } = require('mongodb/lib/gridfs/grid_store')
+// C-Task
+/*
+Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
+*/
+time = moment().format('HH:mm')
+class Shop {
+  constructor(non, suv, shorva) {
+    this.mahsulotlar = {
+      non: non,
+      suv: suv,
+      shorva: shorva
+    };
+}
+
+    qoldiq(){
+            console.log(`hozir ${time} da ${this.mahsulotlar.non} Non ${this.mahsulotlar.suv} Suv va ${this.mahsulotlar.shorva} Shorva mavjud`)
+    }
+    
+    sotish(nima,soni){
+        if(nima in this.mahsulotlar){
+            this.mahsulotlar[nima] -= soni;
+            console.log(`${time} da ${this.mahsulotlar.non} ta ${nima} sotildi`)
+        }
+    }
+
+    qoshish(nima,soni){
+        if(nima in this.mahsulotlar){
+            this.mahsulotlar[nima] += soni;
+            console.log(`${time} da ${this.mahsulotlar.non} ta ${nima} qoshildi`)
+        }
+    }
+}
+
+const shop = new Shop(10,20,30);
+shop.qoldiq();
+shop.sotish("non",5);
+shop.qoshish("shorva",5);
+shop.qoldiq();
+// shop.sotish('Non',5);
+// shop.qoldiq()
 //B-Task
 // let count = 0; 
 // function countnumber(word) {
