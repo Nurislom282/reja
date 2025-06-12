@@ -1,6 +1,5 @@
 // console.log("TRAIN AREA!");
 const moment = require('moment')
-const { list } = require('mongodb/lib/gridfs/grid_store')
 // C-Task
 /*
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
