@@ -1,43 +1,52 @@
 // console.log("TRAIN AREA!");
-const moment = require('moment')
+// const moment = require('moment')
+function content (a,b){
+    const string1 = a.split("").sort().join("")
+    const string2 = b.split("").sort().join("")
+    if (string1 === string2){
+        return true;
+    }
+    return false;
+}
+console.log(content("ray","yar"))
 // C-Task
 /*
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
 */
-time = moment().format('HH:mm')
-class Shop {
-  constructor(non, suv, shorva) {
-    this.mahsulotlar = {
-      non: non,
-      suv: suv,
-      shorva: shorva
-    };
-}
+// time = moment().format('HH:mm')
+// class Shop {
+//   constructor(non, suv, shorva) {
+//     this.mahsulotlar = {
+//       non: non,
+//       suv: suv,
+//       shorva: shorva
+//     };
+// }
 
-    qoldiq(){
-            console.log(`hozir ${time} da ${this.mahsulotlar.non} Non ${this.mahsulotlar.suv} Suv va ${this.mahsulotlar.shorva} Shorva mavjud`)
-    }
+//     qoldiq(){
+//             console.log(`hozir ${time} da ${this.mahsulotlar.non} Non ${this.mahsulotlar.suv} Suv va ${this.mahsulotlar.shorva} Shorva mavjud`)
+//     }
     
-    sotish(nima,soni){
-        if(nima in this.mahsulotlar){
-            this.mahsulotlar[nima] -= soni;
-            console.log(`${time} da ${this.mahsulotlar.non} ta ${nima} sotildi`)
-        }
-    }
+//     sotish(nima,soni){
+//         if(nima in this.mahsulotlar){
+//             this.mahsulotlar[nima] -= soni;
+//             console.log(`${time} da ${this.mahsulotlar.non} ta ${nima} sotildi`)
+//         }
+//     }
 
-    qoshish(nima,soni){
-        if(nima in this.mahsulotlar){
-            this.mahsulotlar[nima] += soni;
-            console.log(`${time} da ${this.mahsulotlar.non} ta ${nima} qoshildi`)
-        }
-    }
-}
+//     qoshish(nima,soni){
+//         if(nima in this.mahsulotlar){
+//             this.mahsulotlar[nima] += soni;
+//             console.log(`${time} da ${this.mahsulotlar.non} ta ${nima} qoshildi`)
+//         }
+//     }
+// }
 
-const shop = new Shop(10,20,30);
-shop.qoldiq();
-shop.sotish("non",5);
-shop.qoshish("shorva",5);
-shop.qoldiq();
+// const shop = new Shop(10,20,30);
+// shop.qoldiq();
+// shop.sotish("non",5);
+// shop.qoshish("shorva",5);
+// shop.qoldiq();
 // shop.sotish('Non',5);
 // shop.qoldiq()
 //B-Task
