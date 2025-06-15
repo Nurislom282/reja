@@ -1,14 +1,25 @@
 // console.log("TRAIN AREA!");
-// const moment = require('moment')
-function content (a,b){
-    const string1 = a.split("").sort().join("")
-    const string2 = b.split("").sort().join("")
-    if (string1 === string2){
-        return true;
-    }
-    return false;
+// E-TASK: 
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+
+function reversing(a){
+    const res = a.split("").reverse().join("")
+    return res
 }
-console.log(content("ray","yar"))
+
+console.log(reversing("hello"))
+
+// const moment = require('moment')
+// function content (a,b){
+//     const string1 = a.split("").sort().join("")
+//     const string2 = b.split("").sort().join("")
+//     if (string1 === string2){
+//         return true;
+//     }
+//     return false;
+// }
+// console.log(content("ray","yar"))
 // C-Task
 /*
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
