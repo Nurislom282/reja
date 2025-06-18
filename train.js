@@ -1,14 +1,33 @@
 // console.log("TRAIN AREA!");
+// TASK-F
+/*
+Yagona string argumentga ega findDoublers nomli function tuzing
+Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+true yokida false natija qaytarsin.
+*/
+function findduble(word){
+    word = word.toLowerCase()
+    let new_word = []
+    for(i of word){
+        if(new_word.includes(i)){
+            return true
+        }
+        new_word.push(i);
+    }
+    return false
+}
+
+console.log(findduble("engneer"))
 // E-TASK: 
 
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 
-function reversing(a){
-    const res = a.split("").reverse().join("")
-    return res
-}
+// function reversing(a){
+//     const res = a.split("").reverse().join("")
+//     return res
+// }
 
-console.log(reversing("hello"))
+// console.log(reversing("hello"))
 
 // const moment = require('moment')
 // function content (a,b){
